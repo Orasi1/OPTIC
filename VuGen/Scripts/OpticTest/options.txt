@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Sources\Github\OrasiAppDynamicsLoadToolsIntegration\VuGen\Scripts\OpticTest
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ec:\sources\github\orasiappdynamicsloadtoolsintegration\vugen\scripts\optictest\\logfile.log
+c:\sources\github\orasiappdynamicsloadtoolsintegration\vugen\scripts\optictest\\combined_Optic.c
+c:\sources\github\orasiappdynamicsloadtoolsintegration\vugen\scripts\optictest\\pre_cci.c

@@ -1,0 +1,51 @@
+[General]
+Type=General
+DefaultCfg=default.cfg
+ParameterFile=
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+DevelopTool=Vugen
+MajorVersion=12
+MinorVersion=2
+LastModifyVer=12.2.0.0
+ActiveTypes=General
+AdditionalTypes=General
+GenerateTypes=General
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+DisableRegenerate=0
+Description=
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[Modified Actions]
+vuser_init=1
+Action=1
+vuser_end=1
+[Recorded Actions]
+vuser_init=0
+Action=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+Action=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="MyTransactionName"
+[StateManagement]
+LastReplayStatus=3
+[ActiveReplay]
+LastReplayedRunName=
+ActiveRunName=
+[Transactions]
+MyTransactionName=

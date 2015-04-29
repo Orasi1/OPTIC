@@ -1,0 +1,253 @@
+28 11 1429173644 2 141084872 1993169702 1634140
+28 4 Optic 1 1429173645 0 Optic localhost 0 1
+28 10 localhost 26 0 0
+28 4 Optic 2 1429173645 0 Optic localhost 0 1
+28 0 Optic 2 1429173646 0 localhost 0
+28 8 Optic 2  0 0
+28 0 Optic 1 1429173646 0 localhost 0
+28 8 Optic 1  0 0
+28 2 Optic 1 1429173646 0 p 0 0
+28 2 Optic 2 1429173646 0 p 0 0
+28 4 Optic 3 1429173659 0 Optic localhost 0 1
+28 4 Optic 4 1429173659 0 Optic localhost 0 1
+28 0 Optic 4 1429173659 0 localhost 0
+28 8 Optic 4  0 0
+28 0 Optic 3 1429173659 0 localhost 0
+28 8 Optic 3  0 0
+28 2 Optic 3 1429173659 0 p 0 0
+28 2 Optic 4 1429173659 0 p 0 0
+28 4 Optic 5 1429173674 0 Optic localhost 0 1
+28 4 Optic 6 1429173674 0 Optic localhost 0 1
+28 0 Optic 5 1429173674 0 localhost 0
+28 8 Optic 5  0 0
+28 0 Optic 6 1429173674 0 localhost 0
+28 8 Optic 6  0 0
+28 2 Optic 5 1429173674 0 p 0 0
+28 2 Optic 6 1429173675 0 p 0 0
+28 4 Optic 7 1429173689 0 Optic localhost 0 1
+28 4 Optic 8 1429173689 0 Optic localhost 0 1
+28 0 Optic 7 1429173690 0 localhost 0
+28 8 Optic 7  0 0
+28 2 Optic 7 1429173690 0 p 0 0
+28 0 Optic 8 1429173690 0 localhost 0
+28 8 Optic 8  0 0
+28 2 Optic 8 1429173690 0 p 0 0
+28 4 Optic 9 1429173705 0 Optic localhost 0 1
+28 4 Optic 10 1429173705 0 Optic localhost 0 1
+28 0 Optic 9 1429173705 0 localhost 0
+28 8 Optic 9  0 0
+28 2 Optic 9 1429173705 0 p 0 0
+28 0 Optic 10 1429173705 0 localhost 0
+28 8 Optic 10  0 0
+28 2 Optic 10 1429173705 0 p 0 0
+28 4 Optic 11 1429173720 0 Optic localhost 0 1
+28 4 Optic 12 1429173720 0 Optic localhost 0 1
+28 0 Optic 11 1429173720 0 localhost 0
+28 8 Optic 11  0 0
+28 2 Optic 11 1429173720 0 p 0 0
+28 0 Optic 12 1429173720 0 localhost 0
+28 8 Optic 12  0 0
+28 2 Optic 12 1429173720 0 p 0 0
+28 4 Optic 13 1429173735 0 Optic localhost 0 1
+28 4 Optic 14 1429173735 0 Optic localhost 0 1
+28 0 Optic 14 1429173735 0 localhost 0
+28 8 Optic 14  0 0
+28 2 Optic 14 1429173735 0 p 0 0
+28 0 Optic 13 1429173735 0 localhost 0
+28 8 Optic 13  0 0
+28 2 Optic 13 1429173735 0 p 0 0
+28 4 Optic 15 1429173750 0 Optic localhost 0 1
+28 4 Optic 16 1429173750 0 Optic localhost 0 1
+28 0 Optic 15 1429173750 0 localhost 0
+28 8 Optic 15  0 0
+28 0 Optic 16 1429173750 0 localhost 0
+28 8 Optic 16  0 0
+28 2 Optic 16 1429173750 0 p 0 0
+28 2 Optic 15 1429173750 0 p 0 0
+28 4 Optic 17 1429173765 0 Optic localhost 0 1
+28 4 Optic 18 1429173765 0 Optic localhost 0 1
+28 0 Optic 18 1429173765 0 localhost 0
+28 8 Optic 18  0 0
+28 0 Optic 17 1429173765 0 localhost 0
+28 8 Optic 17  0 0
+28 2 Optic 17 1429173765 0 p 0 0
+28 2 Optic 18 1429173765 0 p 0 0
+28 4 Optic 19 1429173780 0 Optic localhost 0 1
+28 4 Optic 20 1429173780 0 Optic localhost 0 1
+28 0 Optic 20 1429173780 0 localhost 0
+28 8 Optic 20  0 0
+28 0 Optic 19 1429173780 0 localhost 0
+28 8 Optic 19  0 0
+28 2 Optic 19 1429173780 0 p 0 0
+28 2 Optic 20 1429173780 0 p 0 0
+28 4 Optic 21 1429173795 0 Optic localhost 0 1
+28 4 Optic 22 1429173795 0 Optic localhost 0 1
+28 0 Optic 21 1429173795 0 localhost 0
+28 8 Optic 21  0 0
+28 2 Optic 21 1429173795 0 p 0 0
+28 0 Optic 22 1429173795 0 localhost 0
+28 8 Optic 22  0 0
+28 2 Optic 22 1429173795 0 p 0 0
+28 4 Optic 23 1429173810 0 Optic localhost 0 1
+28 4 Optic 24 1429173810 0 Optic localhost 0 1
+28 0 Optic 23 1429173810 0 localhost 0
+28 8 Optic 23  0 0
+28 0 Optic 24 1429173810 0 localhost 0
+28 8 Optic 24  0 0
+28 2 Optic 24 1429173810 0 p 0 0
+28 2 Optic 23 1429173810 0 p 0 0
+28 4 Optic 25 1429173825 0 Optic localhost 0 1
+28 4 Optic 26 1429173825 0 Optic localhost 0 1
+28 0 Optic 26 1429173825 0 localhost 0
+28 8 Optic 26  0 0
+28 2 Optic 26 1429173825 0 p 0 0
+28 0 Optic 25 1429173825 0 localhost 0
+28 8 Optic 25  0 0
+28 2 Optic 25 1429173825 0 p 0 0
+28 4 Optic 27 1429173840 0 Optic localhost 0 1
+28 4 Optic 28 1429173840 0 Optic localhost 0 1
+28 0 Optic 27 1429173840 0 localhost 0
+28 8 Optic 27  0 0
+28 0 Optic 28 1429173840 0 localhost 0
+28 8 Optic 28  0 0
+28 2 Optic 28 1429173840 0 p 0 0
+28 2 Optic 27 1429173840 0 p 0 0
+28 4 Optic 29 1429173855 0 Optic localhost 0 1
+28 4 Optic 30 1429173855 0 Optic localhost 0 1
+28 0 Optic 29 1429173855 0 localhost 0
+28 8 Optic 29  0 0
+28 0 Optic 30 1429173855 0 localhost 0
+28 8 Optic 30  0 0
+28 2 Optic 30 1429173855 0 p 0 0
+28 2 Optic 29 1429173855 0 p 0 0
+28 4 Optic 31 1429173870 0 Optic localhost 0 1
+28 4 Optic 32 1429173870 0 Optic localhost 0 1
+28 0 Optic 31 1429173870 0 localhost 0
+28 8 Optic 31  0 0
+28 0 Optic 32 1429173870 0 localhost 0
+28 8 Optic 32  0 0
+28 2 Optic 32 1429173870 0 p 0 0
+28 2 Optic 31 1429173870 0 p 0 0
+28 4 Optic 33 1429173885 0 Optic localhost 0 1
+28 4 Optic 34 1429173885 0 Optic localhost 0 1
+28 0 Optic 34 1429173885 0 localhost 0
+28 8 Optic 34  0 0
+28 0 Optic 33 1429173885 0 localhost 0
+28 8 Optic 33  0 0
+28 2 Optic 33 1429173885 0 p 0 0
+28 2 Optic 34 1429173885 0 p 0 0
+28 4 Optic 35 1429173900 0 Optic localhost 0 1
+28 4 Optic 36 1429173900 0 Optic localhost 0 1
+28 0 Optic 36 1429173900 0 localhost 0
+28 8 Optic 36  0 0
+28 0 Optic 35 1429173900 0 localhost 0
+28 8 Optic 35  0 0
+28 2 Optic 35 1429173900 0 p 0 0
+28 2 Optic 36 1429173900 0 p 0 0
+28 4 Optic 37 1429173915 0 Optic localhost 0 1
+28 4 Optic 38 1429173915 0 Optic localhost 0 1
+28 0 Optic 38 1429173915 0 localhost 0
+28 8 Optic 38  0 0
+28 2 Optic 38 1429173915 0 p 0 0
+28 0 Optic 37 1429173915 0 localhost 0
+28 8 Optic 37  0 0
+28 2 Optic 37 1429173915 0 p 0 0
+28 4 Optic 39 1429173930 0 Optic localhost 0 1
+28 4 Optic 40 1429173930 0 Optic localhost 0 1
+28 0 Optic 39 1429173930 0 localhost 0
+28 8 Optic 39  0 0
+28 2 Optic 39 1429173930 0 p 0 0
+28 0 Optic 40 1429173930 0 localhost 0
+28 8 Optic 40  0 0
+28 2 Optic 40 1429173930 0 p 0 0
+28 4 Optic 41 1429173945 0 Optic localhost 0 1
+28 4 Optic 42 1429173945 0 Optic localhost 0 1
+28 0 Optic 41 1429173945 0 localhost 0
+28 8 Optic 41  0 0
+28 2 Optic 41 1429173945 0 p 0 0
+28 0 Optic 42 1429173945 0 localhost 0
+28 8 Optic 42  0 0
+28 2 Optic 42 1429173945 0 p 0 0
+28 4 Optic 43 1429173960 0 Optic localhost 0 1
+28 4 Optic 44 1429173960 0 Optic localhost 0 1
+28 0 Optic 44 1429173960 0 localhost 0
+28 8 Optic 44  0 0
+28 0 Optic 43 1429173960 0 localhost 0
+28 8 Optic 43  0 0
+28 2 Optic 43 1429173960 0 p 0 0
+28 2 Optic 44 1429173960 0 p 0 0
+28 4 Optic 45 1429173975 0 Optic localhost 0 1
+28 4 Optic 46 1429173975 0 Optic localhost 0 1
+28 0 Optic 46 1429173975 0 localhost 0
+28 8 Optic 46  0 0
+28 0 Optic 45 1429173975 0 localhost 0
+28 8 Optic 45  0 0
+28 2 Optic 45 1429173975 0 p 0 0
+28 2 Optic 46 1429173975 0 p 0 0
+28 4 Optic 47 1429173990 0 Optic localhost 0 1
+28 4 Optic 48 1429173990 0 Optic localhost 0 1
+28 0 Optic 48 1429173991 0 localhost 0
+28 8 Optic 48  0 0
+28 0 Optic 47 1429173991 0 localhost 0
+28 8 Optic 47  0 0
+28 2 Optic 47 1429173991 0 p 0 0
+28 2 Optic 48 1429173991 0 p 0 0
+28 4 Optic 49 1429174005 0 Optic localhost 0 1
+28 4 Optic 50 1429174005 0 Optic localhost 0 1
+28 0 Optic 50 1429174006 0 localhost 0
+28 8 Optic 50  0 0
+28 0 Optic 49 1429174006 0 localhost 0
+28 8 Optic 49  0 0
+28 2 Optic 50 1429174006 0 p 0 0
+28 2 Optic 49 1429174006 0 p 0 0
+28 1 Optic 5 1429185059 0 2
+28 1 Optic 2 1429185059 0 2
+28 1 Optic 1 1429185060 0 2
+28 1 Optic 3 1429185060 0 2
+28 1 Optic 4 1429185060 0 2
+28 1 Optic 7 1429200296 0 2
+28 1 Optic 8 1429200297 0 2
+28 1 Optic 10 1429200297 0 2
+28 1 Optic 6 1429200297 0 2
+28 1 Optic 9 1429200297 0 2
+28 1 Optic 13 1429200326 0 2
+28 1 Optic 15 1429200326 0 2
+28 1 Optic 14 1429200326 0 2
+28 1 Optic 12 1429200327 0 2
+28 1 Optic 11 1429200327 0 2
+28 1 Optic 23 1429200329 0 2
+28 1 Optic 33 1429200329 0 2
+28 1 Optic 36 1429200329 0 2
+28 1 Optic 47 1429200329 0 2
+28 1 Optic 43 1429200329 0 2
+28 1 Optic 34 1429200329 0 2
+28 1 Optic 31 1429200329 0 2
+28 1 Optic 35 1429200329 0 2
+28 1 Optic 44 1429200329 0 2
+28 1 Optic 42 1429200329 0 2
+28 1 Optic 46 1429200329 0 2
+28 1 Optic 22 1429200329 0 2
+28 1 Optic 37 1429200329 0 2
+28 1 Optic 41 1429200329 0 2
+28 1 Optic 30 1429200329 0 2
+28 1 Optic 26 1429200329 0 2
+28 1 Optic 28 1429200329 0 2
+28 1 Optic 27 1429200329 0 2
+28 1 Optic 25 1429200329 0 2
+28 1 Optic 16 1429200329 0 2
+28 1 Optic 20 1429200329 0 2
+28 1 Optic 32 1429200329 0 2
+28 1 Optic 39 1429200329 0 2
+28 1 Optic 17 1429200329 0 2
+28 1 Optic 19 1429200329 0 2
+28 1 Optic 18 1429200329 0 2
+28 1 Optic 24 1429200329 0 2
+28 1 Optic 45 1429200329 0 2
+28 1 Optic 49 1429200329 0 2
+28 1 Optic 40 1429200329 0 2
+28 1 Optic 29 1429200329 0 2
+28 1 Optic 50 1429200329 0 2
+28 1 Optic 38 1429200329 0 2
+28 1 Optic 48 1429200329 0 2
+28 1 Optic 21 1429200329 0 2
+28 12 1429200329 0 1429200329 0 1429200329

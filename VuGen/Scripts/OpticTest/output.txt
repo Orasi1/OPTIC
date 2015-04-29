@@ -1,0 +1,13 @@
+Virtual User Script started at : 4/16/2015 1:24:00 PM
+Starting action vuser_init.
+PRLoadRunner2(VUsers)\Count: 1
+Processor Information(_Total)\Processor Time: 54
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Abort was called from an action.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
