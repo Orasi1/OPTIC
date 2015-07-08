@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AddIn name = "OpticVuGenAddin"
+       author = "Jon Fowler, Copyright Orasi Software 2015"
+       description = "Adds the functionality to insert Optic commands">
+  <Runtime>
+    <Import assembly = "OpticVuGenAddin.dll">
+      <ConditionEvaluator name="IsValidCodeSelected" class="OpticVuGenAddin.IsValidCodeSelectedCondition"/>
+    </Import>
+    <Import assembly = "OpticVuGenAddin.dll">
+      <ConditionEvaluator name="IsNotValidCodeSelected" class="OpticVuGenAddin.IsNotValidCodeSelectedCondition"/>
+    </Import>
+  </Runtime>
+
+  <Manifest>
+    <Identity name="OpticVuGenAddin" version = "0.0.1.0" />
+  </Manifest>
+
+  <Path name = "/SharpDevelop/ViewContent/TextEditor/ContextMenu">
+    <Condition name="IsValidCodeSelected" action="Disable">
+      <MenuItem id="InsertOpticTransactionHeader" insertafter="GoToLine" insertbefore="InsertSeparator"
+              label = "Insert OPTIC transaction headers for selection"
+              class = "OpticVuGenAddin.AddTransactionWebHeaderSelection"/>
+    </Condition>
+  </Path>
+
+  <Path name = "/SharpDevelop/ViewContent/TextEditor/ContextMenu">
+    <Condition name="IsNotValidCodeSelected" action="Disable">
+      <MenuItem id="InsertOpticIncrementCounter" insertafter="GoToLine" insertbefore="InsertSeparator"
+              label = "Insert OPTIC transaction headers for current file"
+              class = "OpticVuGenAddin.AddTransactionWebHeaderFile"/>
+    </Condition>
+  </Path>
+  <Path name = "/SharpDevelop/ViewContent/TextEditor/ContextMenu">
+    <Condition name="IsNotValidCodeSelected" action="Disable">
+      <MenuItem id="InsertOpticIncrementCounter" insertafter="GoToLine" insertbefore="InsertSeparator"
+              label = "Insert OPTIC transaction headers for all project files"
+              class = "OpticVuGenAddin.AddTransactionWebHeaderProject"/>
+    </Condition>
+  </Path>
+</AddIn>
+
