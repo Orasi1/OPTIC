@@ -50,9 +50,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\OpticUtil\OpticUtil.csproj">
       <Project>{4b15d092-9f2c-467d-ae67-000cb2280f45}</Project>
       <Name>OpticUtil</Name>

@@ -17,7 +17,10 @@ local.properties
 .classpath
 .settings/
 .loadpath
-
+res/
+*.dll
+*.zip
+Deploy/OpticVuGenAddin.addin
 # External tool builders
 .externalToolBuilders/
 
