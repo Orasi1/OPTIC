@@ -8,9 +8,8 @@ using System.Xml;
 using HP.Utt.UttDialog;
 using HP.LR.VuGen.XmlViewer;
 using System.Xml.Linq;
-
-//IConditionEvaluator
 using ICSharpCode.Core;
+using OpticUtil;
 
 //https://github.com/BorisKozo/XmlViewAddin
 //http://h30499.www3.hp.com/t5/LoadRunner-Information-and-News/VuGen-Extensibility-Example-Do-more-with-VuGen-11-5X/td-p/6065567#.VYr_4vlVhBc
@@ -52,7 +51,7 @@ namespace OpticVuGenAddin
 
             string[] rgLines = editor.SelectedText.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             StringBuilder newLines = null;
-            int newLineCount = UtilFunctions.ProcessTransText(rgLines, ref newLines);
+            int newLineCount = VuGenUtilFunctions.ProcessTransText(rgLines, ref newLines);
             if (newLineCount > 0)
             {
                 editor.Document.Replace(editor.SelectionStart, editor.SelectionLength, newLines.ToString());
@@ -97,7 +96,7 @@ namespace OpticVuGenAddin
 
             string[] rgLines = editor.Document.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             StringBuilder newLines = null;
-            int newLineCount = UtilFunctions.ProcessTransText(rgLines, ref newLines);
+            int newLineCount = VuGenUtilFunctions.ProcessTransText(rgLines, ref newLines);
             if (newLineCount > 0)
             {
                 editor.Document.Replace(0, editor.Document.TextLength, newLines.ToString());
@@ -128,7 +127,7 @@ namespace OpticVuGenAddin
             if (pos > 0)
             {
                 string directory = fileName.Substring(0, pos);
-                UtilFunctions.ProcessDirectory(directory);
+                VuGenUtilFunctions.ProcessDirectory(directory);
             }
         }
     }

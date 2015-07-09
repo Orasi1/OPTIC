@@ -3,11 +3,12 @@ vuser_init()
 	int retval = 0;
 	long counterValue;
 
-	retval = lr_load_dll("C:\\sources\\github\\OrasiAppDynamicsLoadToolsIntegration\\Release\\Optic.dll");
-    IncrementCounter("PRLoadRunner2(VUsers)\\Count", 1);
+	retval = lr_load_dll("C:\\Users\\conjpf\\Sources\\Codeplex\\Optic2\\Release\\Optic.dll");
+	
+    IncrementCounter("LoadRunner(VUsers)\\Count", 1);
 
-    counterValue = GetCounter("PRLoadRunner2(VUsers)\\Count");
-   	lr_log_message("PRLoadRunner2(VUsers)\\Count: %d", counterValue);
+    counterValue = GetCounter("LoadRunner(VUsers)\\Count");
+   	lr_log_message("LoadRunner(VUsers)\\Count: %d", counterValue);
 
 	counterValue = GetCounter("Processor Information(_Total)\\% Processor Time");
    	lr_log_message("Processor Information(_Total)\\% Processor Time: %d", counterValue);

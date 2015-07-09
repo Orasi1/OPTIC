@@ -122,11 +122,11 @@ namespace OpticUtil
         /// User passes in a path in this format
         /// "HP LoadRunner Performance"
         /// "\\HP LoadRunner Performance"
-        /// "\\HP LoadRunner Performance(IMH IPMS Web Service)"
-        /// "HP LoadRunner Performance(IMH IPMS Web Service)"
-        /// "HP LoadRunner Performance(<computername> IMH IPMS Web Service)"
+        /// "\\HP LoadRunner Performance(My Web Service)"
+        /// "HP LoadRunner Performance(My Web Service)"
+        /// "HP LoadRunner Performance(<computername> My Web Service)"
         /// </summary>
-        private static PerfCounter ParseCounterPath(string performanceCounter, bool restrictCountName)
+        private static PerfCounter ParseCounterPath(string performanceCounter, bool restrictCounterName)
         {
             var perfCounter = new PerfCounter();
 
@@ -170,7 +170,7 @@ namespace OpticUtil
                             perfCounter.CounterType = PerformanceCounterType.AverageTimer32;
                             break;
                         default:
-                            if (restrictCountName)
+                            if (restrictCounterName)
                             {
                                 throw new Exception(string.Format("Counter name : \"{0}\" not understood. Please use \"Count\", \"Rate/Sec\", or \"Average\".", perfCounter.CounterName));
                             }
