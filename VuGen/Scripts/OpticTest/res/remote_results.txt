@@ -1,2 +1,0 @@
-[Hosts]
-localhost=c:\sources\github\orasiappdynamicsloadtoolsintegration\vugen\scripts\optictest\res\localhost_1.eve
