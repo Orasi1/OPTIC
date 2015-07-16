@@ -16,26 +16,34 @@
   </Manifest>
 
   <Path name = "/SharpDevelop/ViewContent/TextEditor/ContextMenu">
-    <Condition name="IsValidCodeSelected" action="Disable">
-      <MenuItem id="InsertOpticTransactionHeader" insertafter="GoToLine" insertbefore="InsertSeparator"
-              label = "Insert OPTIC transaction headers for selection"
-              class = "OpticVuGenAddin.AddTransactionWebHeaderSelection"/>
-    </Condition>
-  </Path>
+    <MenuItem id = "Optic"
+              label = "&amp;OPTIC"
+              type = "Menu"
+              insertafter="GoToLine"
+              insertbefore="InsertSeparator">
+      <MenuItem id="InsertOpticTransactionHeader"
+              label = "Insert initialization"
+              class = "OpticVuGenAddin.AddInitialization"/>
+      <MenuItem id="InsertOpticTransactionHeader"
+              label = "Insert increment VUsers Count"
+              class = "OpticVuGenAddin.AddVUserCount"/>
+      <Condition name="IsValidCodeSelected" action="Disable">
+        <MenuItem id="InsertOpticTransactionHeader"
+                label = "Insert transaction headers for selection"
+                class = "OpticVuGenAddin.AddTransactionWebHeaderSelection"/>
+      </Condition>
+      <Condition name="IsNotValidCodeSelected" action="Disable">
+        <MenuItem id="InsertOpticIncrementCounter"
+                label = "Insert transaction headers for current file"
+                class = "OpticVuGenAddin.AddTransactionWebHeaderFile"/>
+      </Condition>
+      <Condition name="IsNotValidCodeSelected" action="Disable">
+        <MenuItem id="InsertOpticIncrementCounter"
+                label = "Insert transaction headers for all project files"
+                class = "OpticVuGenAddin.AddTransactionWebHeaderProject"/>
+      </Condition>
+    </MenuItem>
 
-  <Path name = "/SharpDevelop/ViewContent/TextEditor/ContextMenu">
-    <Condition name="IsNotValidCodeSelected" action="Disable">
-      <MenuItem id="InsertOpticIncrementCounter" insertafter="GoToLine" insertbefore="InsertSeparator"
-              label = "Insert OPTIC transaction headers for current file"
-              class = "OpticVuGenAddin.AddTransactionWebHeaderFile"/>
-    </Condition>
-  </Path>
-  <Path name = "/SharpDevelop/ViewContent/TextEditor/ContextMenu">
-    <Condition name="IsNotValidCodeSelected" action="Disable">
-      <MenuItem id="InsertOpticIncrementCounter" insertafter="GoToLine" insertbefore="InsertSeparator"
-              label = "Insert OPTIC transaction headers for all project files"
-              class = "OpticVuGenAddin.AddTransactionWebHeaderProject"/>
-    </Condition>
   </Path>
 </AddIn>
 

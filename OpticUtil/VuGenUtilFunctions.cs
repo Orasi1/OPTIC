@@ -36,26 +36,7 @@ namespace OpticUtil
                 if (pos > 0)
                 {
                     transFoundCount++;
-                    //Find the line prefix spaces or tab to use for the new line of code
-                    string linePrefix = string.Empty;
-                    int prefixPos = 0;
-                    while (true)
-                    {
-                        //Get next character of line prefix
-                        string prefixString = line.Substring(prefixPos++, 1);
-
-                        //If it contains a space or tab store and continue
-                        if (prefixString == " " || prefixString == "\t")
-                        {
-                            //add prefix character
-                            linePrefix += prefixString;
-                        }
-                        else
-                        {
-                            //exit while loop
-                            break;
-                        }
-                    }
+                    string linePrefix = GetLinePrefixSpacesTabs(line);
 
                     //Increment the postion to transaction name string
                     pos = pos + lrScriptTransFunctionIdString.Length;
@@ -67,7 +48,11 @@ namespace OpticUtil
                     string transName = line.Substring(pos, endPos - pos);
 
                     //Format a new line to add to the new file
-                    string newLine = string.Format("{0}{1}(\"{2}\", {3});", linePrefix, lrScriptAddHeaderFunctionName, lrScriptHeaderTransIdString, transName);
+                    string newLine = string.Format("{0}{1}(\"{2}\", {3});",
+                        linePrefix,
+                        lrScriptAddHeaderFunctionName,
+                        lrScriptHeaderTransIdString,
+                        transName);
 
                     //Determine if the code has already been added
                     bool found = false;
@@ -104,6 +89,35 @@ namespace OpticUtil
             Console.WriteLine();
 
             return newLineCount;
+        }
+
+        public static string GetLinePrefixSpacesTabs(string line)
+        {
+            if(string.IsNullOrEmpty(line))
+            {
+                return "";
+            }
+            //Find the line prefix spaces or tab to use for the new line of code
+            string linePrefix = string.Empty;
+            int prefixPos = 0;
+            while (true)
+            {
+                //Get next character of line prefix
+                string prefixString = line.Substring(prefixPos++, 1);
+
+                //If it contains a space or tab store and continue
+                if (prefixString == " " || prefixString == "\t")
+                {
+                    //add prefix character
+                    linePrefix += prefixString;
+                }
+                else
+                {
+                    //exit while loop
+                    break;
+                }
+            }
+            return linePrefix;
         }
 
         public static void ProcessDirectory(string dir)

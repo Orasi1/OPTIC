@@ -32,28 +32,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HP.LR.VuGen.Common">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\HP\Virtual User Generator\bin\HP.LR.VuGen.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="HP.LR.VuGen.XmlViewer">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\HP\Virtual User Generator\bin\HP.LR.VuGen.XmlViewer.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\HP\LoadRunner\bin\HP.LR.VuGen.Common.dll</HintPath>
     </Reference>
     <Reference Include="HP.Utt.CodeEditor">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\HP\Virtual User Generator\bin\HP.Utt.CodeEditor.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\HP\LoadRunner\bin\HP.Utt.CodeEditor.dll</HintPath>
     </Reference>
     <Reference Include="HP.Utt.Common">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\HP\Virtual User Generator\bin\HP.Utt.Common.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\HP\LoadRunner\bin\HP.Utt.Common.dll</HintPath>
     </Reference>
     <Reference Include="HP.Utt.Core">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\HP\Virtual User Generator\bin\HP.Utt.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\HP\LoadRunner\bin\HP.Utt.Core.dll</HintPath>
     </Reference>
     <Reference Include="HP.Utt.Dialog">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\HP\Virtual User Generator\bin\HP.Utt.Dialog.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\HP\LoadRunner\bin\HP.Utt.Dialog.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.Core">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\HP\Virtual User Generator\bin\ICSharpCode.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\HP\LoadRunner\bin\ICSharpCode.Core.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpDevelop">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\HP\Virtual User Generator\bin\ICSharpCode.SharpDevelop.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\HP\LoadRunner\bin\ICSharpCode.SharpDevelop.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

@@ -6,7 +6,7 @@ using ICSharpCode.SharpDevelop.Editor;
 using System.Text;
 using System.Xml;
 using HP.Utt.UttDialog;
-using HP.LR.VuGen.XmlViewer;
+//using HP.LR.VuGen.XmlViewer;
 using System.Xml.Linq;
 using ICSharpCode.Core;
 using OpticUtil;
@@ -56,6 +56,58 @@ namespace OpticVuGenAddin
             {
                 editor.Document.Replace(editor.SelectionStart, editor.SelectionLength, newLines.ToString());
             }
+        }
+    }
+
+    public class SharedFunctions
+    {
+
+        internal static void InsertLines(string[] lines)
+        {
+            ITextEditor editor = UttCodeEditor.GetActiveTextEditor();
+
+            StringBuilder newLines = new StringBuilder();
+            string linePrefix =
+                string.IsNullOrEmpty(editor.SelectedText) ?
+                "\t" :
+                VuGenUtilFunctions.GetLinePrefixSpacesTabs(editor.SelectedText);
+            string lineSuffix = string.Empty;
+
+            newLines.AppendLine(editor.SelectedText);
+            newLines.AppendLine("");
+            for (int i = 0; i < lines.Length; i++)
+            {
+                newLines.Append(linePrefix);
+                newLines.Append(lines[i]);
+                lineSuffix = (i == (lines.Length - 1)) ? string.Empty : System.Environment.NewLine;
+                newLines.Append(lineSuffix);
+            }
+            editor.Document.Replace(editor.SelectionStart, editor.SelectionLength, newLines.ToString());
+        }
+    }
+
+    public class AddInitialization : UttBaseWpfCommand
+    {
+        public override void Run()
+        {
+            SharedFunctions.InsertLines(
+                new string[]
+                {
+                    "//Initialize Optic",
+                    "lr_load_dll(\"Optic.dll\");"
+                });
+        }
+    }
+    public class AddVUserCount : UttBaseWpfCommand
+    {
+        public override void Run()
+        {
+            SharedFunctions.InsertLines(
+                new string[]
+                {
+                    "//Increment VUsers",
+                    "IncrementCounter(\"LoadRunner(VUsers)\\\\Count\", 1);"
+                });
         }
     }
 
