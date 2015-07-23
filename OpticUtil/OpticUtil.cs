@@ -3,18 +3,96 @@ using System.IO;
 using System.Diagnostics;
 using System.Collections.Generic;
 
+using System.Text;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 namespace OpticUtil
 {
+    public static class AppDynamicsRest
+    {
+        private static string RestUrl = "controller/rest/applications";
+        private static string EventsUrl = "events";
+
+        public static void CreateCustomEvent(string baseUrl, string credentials, string applicationName, string severity, string customEventType, string summary)
+        {
+            RestPost(
+                baseUrl,
+                credentials,
+                applicationName,
+                new Dictionary<string, string>() {
+                        {"eventtype", "CUSTOM"},
+                        {"severity", severity},
+                        {"customeventtype", customEventType},
+                        {"summary", summary},
+                });
+        }
+
+        private static void RestPost(string baseUrl, string credentials, string applicationName, Dictionary<string, string> urlParams)
+        {
+            HttpClient httpClient = Authenticate(baseUrl, credentials);
+
+            StringBuilder queryString = new StringBuilder();
+            foreach (KeyValuePair<string, string> kvp in urlParams)
+            {
+                queryString.Append(string.Format("{0}={1}&", kvp.Key, kvp.Value));
+            }
+            var url = string.Format("{0}/{1}/{2}?{3}", RestUrl, applicationName, EventsUrl, queryString.ToString()).Replace(" ", "%20");
+
+            //Todo: not sure why i have to create empty content
+            System.Net.Http.HttpContent content = new StringContent("", UTF8Encoding.UTF8, "application/xml");
+            HttpResponseMessage message = httpClient.PostAsync(url, content).Result;
+
+            string result = message.Content.ReadAsStringAsync().Result;
+
+            Console.WriteLine("RestPost()");
+            if (message.IsSuccessStatusCode)
+            {
+                Console.WriteLine("RestPost succeeded with the following information:");
+                Console.WriteLine(result);
+            }
+            else
+            {
+                StringBuilder exceptionText = new StringBuilder();
+                exceptionText.AppendLine("RestPost failed with the following information:");
+                exceptionText.AppendLine(string.Format("ReasonPhrase: {0}", message.ReasonPhrase));
+                exceptionText.Append(string.Format("Result: {0}", result));
+                throw new Exception(exceptionText.ToString());
+            }
+        }
+
+        private static HttpClient Authenticate(string baseUrl, string credentials)
+        {
+            HttpClient httpClient = new HttpClient();
+            httpClient.BaseAddress = new Uri(baseUrl);
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/xml"));
+
+            byte[] cred = UTF8Encoding.UTF8.GetBytes(credentials);
+            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(cred));
+
+            HttpResponseMessage message = httpClient.GetAsync(RestUrl).Result;
+
+            if (message.IsSuccessStatusCode)
+            {
+                string result = message.Content.ReadAsStringAsync().Result;
+            }
+            else
+            {
+                throw new Exception(string.Format("Error authenticating. URL: {0}. Reason phrase: {1}. Request message:{2}.", RestUrl, message.ReasonPhrase, message.RequestMessage));
+            }
+            return httpClient;
+        }
+    }
+
     public static class Counter
     {
-
         public static void IncrementCounter(string performanceCounter, double value)
         {
             var perfCounter = ParseCounterPath(performanceCounter, true);
             CreatePerformanceCounterCategory(perfCounter);
             IncrementPerformanceCounter(perfCounter, value);
         }
-
 
         public static void ResetCounter(string performanceCounter, int value)
         {
@@ -64,7 +142,6 @@ namespace OpticUtil
             }
             return (long)nextValue; //Losing the decimal place here, but havent figured out how to marshall float back to LR
         }
-
 
         private static void ResetPerformanceCounter(PerfCounter perfCounter, int value)
         {

@@ -10,14 +10,36 @@ namespace OpticUtil
     {
         public static int ProcessTransText(string[] rgLines, ref StringBuilder newLines)
         {
+            int funcType = 1;
+
             int newLineCount = 0;
             int transFoundCount = 0;
 
-            const string lrScriptTransFunctionIdString = "lr_start_transaction(";
-            const string lrScriptAddHeaderFunctionName = "web_add_header";
-            const string lrScriptHeaderTransIdString = "AppDHeader";
-            const string lrScriptComment = "//OPTIC: Adds a LoadRunner header that AppDynamics will recognize.";
+            string lrScriptFunctionIdString = string.Empty;
+            string lrScriptAddFunctionName = string.Empty;
+            string lrScriptHeaderIdString = string.Empty;
+            string lrScriptComment = string.Empty;
 
+            if (funcType == 1)
+            {
+                //Type 1
+                //lr_start_transaction("LDB_010_Connect");
+                //web_add_header("AppDHeader", "LDB_010_Connect");
+                lrScriptFunctionIdString = "lr_start_transaction(";
+                lrScriptAddFunctionName = "web_add_header";
+                lrScriptHeaderIdString = "AppDHeader";
+                lrScriptComment = "//OPTIC: Adds a LoadRunner header that AppDynamics will recognize.";
+            }
+            else if(funcType == 2)
+            {
+                //Type 2
+                //lr_end_transaction("LDB_010_Connect", LR_AUTO);
+                //IncrementCounter("LoadRunner(LDB_010_Connect)\\Rate/Sec", 1);
+                lrScriptFunctionIdString = "lr_end_transaction(";
+                lrScriptAddFunctionName = "IncrementCounter(\"LoadRunner(";
+                lrScriptHeaderIdString = "";
+                lrScriptComment = "//OPTIC: Increment a transaction header";
+            }
             //Used to contain new file contents
             newLines = new StringBuilder();
 
@@ -30,7 +52,7 @@ namespace OpticUtil
                 newLines.AppendLine(line);
 
                 //Store the position of the transaction if there is one
-                int pos = line.IndexOf(lrScriptTransFunctionIdString, StringComparison.CurrentCultureIgnoreCase);
+                int pos = line.IndexOf(lrScriptFunctionIdString, StringComparison.CurrentCultureIgnoreCase);
 
                 //If found get value of transaction name and create new line
                 if (pos > 0)
@@ -39,7 +61,7 @@ namespace OpticUtil
                     string linePrefix = GetLinePrefixSpacesTabs(line);
 
                     //Increment the postion to transaction name string
-                    pos = pos + lrScriptTransFunctionIdString.Length;
+                    pos = pos + lrScriptFunctionIdString.Length;
 
                     //Find the end of the function
                     int endPos = line.IndexOf(")", pos);
@@ -50,8 +72,8 @@ namespace OpticUtil
                     //Format a new line to add to the new file
                     string newLine = string.Format("{0}{1}(\"{2}\", {3});",
                         linePrefix,
-                        lrScriptAddHeaderFunctionName,
-                        lrScriptHeaderTransIdString,
+                        lrScriptAddFunctionName,
+                        lrScriptHeaderIdString,
                         transName);
 
                     //Determine if the code has already been added
@@ -67,7 +89,7 @@ namespace OpticUtil
                         }
 
                         //If we get to a new transaction, stop looking
-                        if (rgLines[j].IndexOf(lrScriptTransFunctionIdString, StringComparison.CurrentCultureIgnoreCase) > 0)
+                        if (rgLines[j].IndexOf(lrScriptFunctionIdString, StringComparison.CurrentCultureIgnoreCase) > 0)
                         {
                             break;
                         }
