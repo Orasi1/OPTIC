@@ -98,6 +98,7 @@ namespace OpticVuGenAddin
                 });
         }
     }
+
     public class AddVUserCount : UttBaseWpfCommand
     {
         public override void Run()
@@ -107,6 +108,24 @@ namespace OpticVuGenAddin
                 {
                     "//Increment VUsers",
                     "IncrementCounter(\"LoadRunner(VUsers)\\\\Count\", 1);"
+                });
+        }
+    }
+
+    public class AddAppDynamicsCustomEvent : UttBaseWpfCommand
+    {
+        public override void Run()
+        {
+            SharedFunctions.InsertLines(
+                new string[]
+                {
+	                "CreateCustomEvent(",
+		                "\"https://<controller URL\",",
+		                "\"your_username>@customer1:your_password\",",
+		                "\"Application Name\",",
+		                "\"INFO\",",
+		                "\"OPTIC\",",
+		                "\"Load Test - Start\");"
                 });
         }
     }

@@ -21,12 +21,19 @@
               type = "Menu"
               insertafter="GoToLine"
               insertbefore="InsertSeparator">
-      <MenuItem id="InsertOpticTransactionHeader"
+      <MenuItem id="InsertInitialization"
               label = "Insert initialization"
               class = "OpticVuGenAddin.AddInitialization"/>
-      <MenuItem id="InsertOpticTransactionHeader"
+      <MenuItem id="AddVUserCount"
               label = "Insert increment VUsers Count"
               class = "OpticVuGenAddin.AddVUserCount"/>
+      <MenuItem id = "AppDynamics"
+                label = "&amp;AppDynamics"
+                type = "Menu">
+        <MenuItem id="AddCustomEvent"
+                label = "Insert AppDynamics Custom Event"
+                class = "OpticVuGenAddin.AddAppDynamicsCustomEvent"/>
+      </MenuItem>
       <Condition name="IsValidCodeSelected" action="Disable">
         <MenuItem id="InsertOpticTransactionHeader"
                 label = "Insert transaction headers for selection"

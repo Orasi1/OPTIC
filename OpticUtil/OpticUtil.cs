@@ -11,6 +11,7 @@ namespace OpticUtil
 {
     public static class AppDynamicsRest
     {
+	//https://docs.appdynamics.com/display/PRO41/Use+the+AppDynamics+REST+APi
         private static string RestUrl = "controller/rest/applications";
         private static string EventsUrl = "events";
 

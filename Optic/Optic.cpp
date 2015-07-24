@@ -89,6 +89,5 @@ void CallCreateCustomEvent(string baseUrl, string credentials, string applicatio
 	String^ clrEventSeverity = gcnew String(eventSeverity.c_str());
 	String^ clrCustomEventType = gcnew String(customEventType.c_str());
 	String^ clrEventSummary = gcnew String(eventSummary.c_str());
-	//AppDynamicsRest::CreateCustomEvent(string baseUrl, string credentials, string applicationName, string severity, string customEventType, string summary);
 	AppDynamicsRest::CreateCustomEvent(clrBaseUrl, clrCredentials, clrApplicationName, clrEventSeverity, clrCustomEventType, clrEventSummary);
 }
