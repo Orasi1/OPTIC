@@ -74,7 +74,7 @@ namespace OpticVuGenAddin
             string lineSuffix = string.Empty;
 
             newLines.AppendLine(editor.SelectedText);
-            newLines.AppendLine("");
+            //newLines.AppendLine("");
             for (int i = 0; i < lines.Length; i++)
             {
                 newLines.Append(linePrefix);
@@ -112,6 +112,49 @@ namespace OpticVuGenAddin
         }
     }
 
+    public class GetVUserCount : UttBaseWpfCommand
+    {
+        public override void Run()
+        {
+            SharedFunctions.InsertLines(
+                new string[]
+                {
+                    "//Get a performance counter",
+                    "int counterValue = 0;",
+                    "counterValue = GetCounter(\"LoadRunner(VUsers)\\\\Count\");",
+ 	                "lr_log_message(\"LoadRunner(VUsers)\\Count: %d\", counterValue);"
+                });
+        }
+    }
+
+    public class GetCPUCounter : UttBaseWpfCommand
+    {
+        public override void Run()
+        {
+            SharedFunctions.InsertLines(
+                new string[]
+                {
+                    "//Get a performance counter",
+                    "int counterValue = 0;",
+                    "counterValue = GetCounter(\"Processor Information(_Total)\\\\% Processor Time\");",
+ 	                "lr_log_message(\"Processor Information(_Total)\\% Processor Time: %d\", counterValue);"
+                });
+        }
+    }
+
+    public class ResetVUserCount : UttBaseWpfCommand
+    {
+        public override void Run()
+        {
+            SharedFunctions.InsertLines(
+                new string[]
+                {
+                    "//Reset a performance counter",
+                    "ResetCounter(\"LoadRunner(VUsers)\\\\Count\", 0);"
+                });
+        }
+    }
+
     public class AddAppDynamicsCustomEvent : UttBaseWpfCommand
     {
         public override void Run()
@@ -120,7 +163,7 @@ namespace OpticVuGenAddin
                 new string[]
                 {
 	                "CreateCustomEvent(",
-		                "\"https://<controller URL\",",
+		                "\"https://controller URL\",",
 		                "\"your_username>@customer1:your_password\",",
 		                "\"Application Name\",",
 		                "\"INFO\",",

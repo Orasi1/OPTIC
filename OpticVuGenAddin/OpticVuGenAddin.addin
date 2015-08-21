@@ -21,12 +21,44 @@
               type = "Menu"
               insertafter="GoToLine"
               insertbefore="InsertSeparator">
-      <MenuItem id="InsertInitialization"
-              label = "Insert initialization"
-              class = "OpticVuGenAddin.AddInitialization"/>
-      <MenuItem id="AddVUserCount"
-              label = "Insert increment VUsers Count"
-              class = "OpticVuGenAddin.AddVUserCount"/>
+        <MenuItem id="InsertInitialization"
+                label = "Insert initialization"
+                class = "OpticVuGenAddin.AddInitialization"/>
+      <MenuItem id = "Counters"
+                label = "&amp;Counters"
+                type = "Menu">
+        <MenuItem id="AddVUserCount"
+                label = "Insert Increment VUsers Count"
+                class = "OpticVuGenAddin.AddVUserCount"/>
+        <MenuItem id="GetVUserCount"
+                label = "Insert Get VUsers Count"
+                class = "OpticVuGenAddin.GetVUserCount"/>
+        <MenuItem id="ResetVUserCount"
+                label = "Insert Reset VUsers Count"
+                class = "OpticVuGenAddin.ResetVUserCount"/>
+        <MenuItem id="GetVUserCount"
+                label = "Insert Get % Processor Time counter"
+                class = "OpticVuGenAddin.GetCPUCounter"/>
+      </MenuItem>
+      <MenuItem id = "TransactionHeaders"
+                label = "&amp;Transaction Headers"
+                type = "Menu">
+        <Condition name="IsValidCodeSelected" action="Disable">
+          <MenuItem id="InsertOpticTransactionHeader"
+                  label = "Insert for selection"
+                  class = "OpticVuGenAddin.AddTransactionWebHeaderSelection"/>
+        </Condition>
+        <Condition name="IsNotValidCodeSelected" action="Disable">
+          <MenuItem id="InsertOpticIncrementCounter"
+                  label = "Insert for current file"
+                  class = "OpticVuGenAddin.AddTransactionWebHeaderFile"/>
+        </Condition>
+        <Condition name="IsNotValidCodeSelected" action="Disable">
+          <MenuItem id="InsertOpticIncrementCounter"
+                  label = "Insert for all project/script files"
+                  class = "OpticVuGenAddin.AddTransactionWebHeaderProject"/>
+        </Condition>
+      </MenuItem>
       <MenuItem id = "AppDynamics"
                 label = "&amp;AppDynamics"
                 type = "Menu">
@@ -34,21 +66,6 @@
                 label = "Insert AppDynamics Custom Event"
                 class = "OpticVuGenAddin.AddAppDynamicsCustomEvent"/>
       </MenuItem>
-      <Condition name="IsValidCodeSelected" action="Disable">
-        <MenuItem id="InsertOpticTransactionHeader"
-                label = "Insert transaction headers for selection"
-                class = "OpticVuGenAddin.AddTransactionWebHeaderSelection"/>
-      </Condition>
-      <Condition name="IsNotValidCodeSelected" action="Disable">
-        <MenuItem id="InsertOpticIncrementCounter"
-                label = "Insert transaction headers for current file"
-                class = "OpticVuGenAddin.AddTransactionWebHeaderFile"/>
-      </Condition>
-      <Condition name="IsNotValidCodeSelected" action="Disable">
-        <MenuItem id="InsertOpticIncrementCounter"
-                label = "Insert transaction headers for all project files"
-                class = "OpticVuGenAddin.AddTransactionWebHeaderProject"/>
-      </Condition>
     </MenuItem>
 
   </Path>

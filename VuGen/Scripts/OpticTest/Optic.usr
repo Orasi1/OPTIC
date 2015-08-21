@@ -7,9 +7,9 @@ NewFunctionHeader=1
 RunType=cci
 ActionLogicExt=action_logic
 DevelopTool=Vugen
-MajorVersion=11
-MinorVersion=52
-LastModifyVer=11.52.0.0
+MajorVersion=12
+MinorVersion=2
+LastModifyVer=12.2.0.0
 ActiveTypes=General
 AdditionalTypes=General
 GenerateTypes=General
@@ -41,11 +41,11 @@ vuser_init=cci
 Action=cci
 vuser_end=cci
 [TransactionsOrder]
-Order="MyTransactionName"
+Order="LDB_010_Connect"
 [StateManagement]
 LastReplayStatus=3
 [ActiveReplay]
 LastReplayedRunName=
 ActiveRunName=
 [Transactions]
-MyTransactionName=
+LDB_010_Connect=
